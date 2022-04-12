@@ -122,7 +122,7 @@ nav::after{
 	margin: 0 10px;
 }
 
-#search-form input[type=submit] {
+#search-form input[type=submit], #sendjobs input[type=submit] {
 	background-color: #3381F3;
 	text-transform: uppercase;
 	color: #FFF;
@@ -130,7 +130,7 @@ nav::after{
 	transition: 0.5s;
 }
 
-#search-form input[type=submit]:hover {
+#search-form input[type=submit]:hover, #sendjobs input[type=submit]:hover {
 	background-color: #0e51b6;
 }
 
@@ -591,6 +591,130 @@ footer .wrapper:after {
 	margin-top: 40px;
 }
 
+/* findjobs page */
+#findjobs #search-form {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	width: 100%;
+	background-color: #3381F3;
+	border-top: 5px solid #0000E6;
+}
+
+#findjobs #lastjobs-container {
+	margin-top: 3em;
+}
+
+#search-form input, #search-form select {
+	width: 20%;
+}
+
+#findjobs #search-form input[type=submit] {
+	background-color: #FFF;
+	color: #3381F3;
+}
+
+#findjobs #lastjobs-container ul {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin-top: 0;
+}
+
+#type-filter {
+	text-align: left;
+}
+
+#findjobs #type-filter ul {
+	margin-bottom: 0;
+	border-radius: 0;
+	border: 0;
+	background-color: #FFF;
+	border-right: 1px solid #CCC;
+}
+
+#findjobs #type-filter ul li {
+	display: inline-block;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: none;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	padding-left: 1em;
+}
+
+#findjobs #type-filter ul li:nth-child(1), #findjobs #type-filter ul li:nth-child(2), #findjobs #type-filter ul li:nth-child(3) {
+	border-right: none;
+}
+
+#findjobs #type-filter label {
+	text-transform: uppercase;
+	color: #666;
+	font-weight: bold;
+	margin-left: .5em;
+}
+
+/* sendjobs page */
+#sendjobs #sendjobs-container {
+	margin-top: 100px;
+	background: none;
+	padding: 5em 0;
+}
+
+#sendjobs h1 {
+	font-size: 36px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.input-box {
+	margin-bottom: 2em;
+	width: 50%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#sendjobs label {
+	text-transform: uppercase;
+	color: #666;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 1em;
+}
+
+#sendjobs input, #sendjobs textarea, #sendjobs select {
+	padding: 10px 20px;
+	font-size: 18px;
+} 
+
+#sendjobs input {
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#sendjobs textarea, #sendjobs select {
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+} 
+
+#sendjobs input[type=submit] {
+	width: 200px;
+	float: right;
+}
+
+.input-box::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
 /* responsive */
 @media screen and (max-width: 1024px) {
 
@@ -640,6 +764,23 @@ footer .wrapper:after {
 		max-width: 960px;
 		padding-left: 2em;
 		padding-right: 2em;
+	}
+
+	/* findjobs page */
+
+	#findjobs #search-form input[type=submit] {
+		margin-bottom: 0;
+	}
+
+	#findjobs #type-filter ul li {
+		width: 100%;
+		border-bottom: 1px solid #CCC;
+		box-sizing: border-box;
+	}
+
+	#findjobs #type-filter ul li:last-child {
+		border-bottom: none;
+		border-right: none;
 	}
 }
 
@@ -826,5 +967,22 @@ footer .wrapper:after {
 	.footer-box {
 		display: block;
 		width: 100%;
+	}
+
+	/* sendjobs pga */
+	#sendjobs #sendjobs-container {
+		padding: 2em 0;
+	}
+
+	#sendjobs h1 {
+		font-size: 2em;
+		width: 60%;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.input-box {
+		width: 80%;
 	}
 }	

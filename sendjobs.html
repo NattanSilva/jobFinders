@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
-	<div class="container" id="findjobs">
+	<div class="container" id="sendjobs">
 		<header>
 			<nav>
 				<div class="nav-container">
@@ -26,117 +26,37 @@
 						<li><a href="#">Contato</a></li>
 					</ul>
 				</div>
-			</nav>
+			</nav>	 
 		</header>
-		<main id="lastjobs-container" class="wrapper">
-			<h1>Busque sua vaga</h1>
-			<div id="job-filter">
-				<div id="search-form">
-					<form>
-						<input type="text" name="job" placeholder="Digite o cargo">
-						<select name="region">
-							<option value="">Todos os estados</option>
-						</select>
-						<select name="category">
-							<option value="">Categoria</option>
-						</select>
-						<input type="submit" value="Pesquisar">
-					</form>
-				</div>
-			</div>
-			<div id="type-filter">
-				<ul>
-					<li>
-						<input type="checkbox" checked><label>CLT</label>
-					</li>
-					<li>
-						<input type="checkbox" checked><label>PJ</label>
-					</li>
-					<li>
-						<input type="checkbox" checked><label>Home Office</label>
-					</li>
-					<li>
-						<input type="checkbox" checked><label>Free Lancer</label>
-					</li>
-				</ul>
-			</div>
-			<ul>
-				<li>
-					<a href="#" class="clickarea">
-						<div class="company-box">
-							<img src="img/googlelogo.png">
-							<div class="company-info">
-								<h3>Developer</h3>
-								<p>Google</p>
-							</div>
-						</div>
-						<div class="locality">
-							<i class="fas fa-map-marker-alt"></i>
-							<p>Mountain View, California</p>
-						</div>
-						<div class="job-type">
-							<span class="clt">CLT</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="clickarea">
-						<div class="company-box">
-							<img src="img/ibmlogo.png">
-							<div class="company-info">
-								<h3>DBA</h3>
-								<p>IBM</p>
-							</div>
-						</div>
-						<div class="locality">
-							<i class="fas fa-map-marker-alt"></i>
-							<p>Armonk, New York</p>
-						</div>
-						<div class="job-type">
-							<span class="pj">PJ</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="clickarea">
-						<div class="company-box">
-							<img src="img/linkedinlogo.png">
-							<div class="company-info">
-								<h3>Front End Developer</h3>
-								<p>Linkedin</p>
-							</div>
-						</div>
-						<div class="locality">
-							<i class="fas fa-map-marker-alt"></i>
-							<p>MSunnyvale, California</p>
-						</div>
-						<div class="job-type">
-							<span class="homeoffice">Home Office</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="clickarea">
-						<div class="company-box">
-							<img src="img/facebooklogo.png">
-							<div class="company-info">
-								<h3>Full Stack Developer</h3>
-								<p>Facebook</p>
-							</div>
-						</div>
-						<div class="locality">
-							<i class="fas fa-map-marker-alt"></i>
-							<p>Menlo Park, California</p>
-						</div>
-						<div class="job-type">
-							<span class="pj">PJ</span>
-						</div>
-					</a>
-				</li>
-			</ul>
-			<div class="btnjobs-container">
-				<a href="#" class="btn-jobs">Carregar mais vagas</a>
-			</div>
+		<main id="sendjobs-container" class="wrapper">
+			<h1>Preencha os dados da vaga</h1>
+            <form>
+                <div class="input-box">
+                    <label>Titulo da vaga <span class="required">*</span></label>
+                    <input type="text" name="jobtitle" placeholder="Insira o titulo da vaga">
+                </div>
+                <div class="input-box">
+                    <label>Descrição da vaga <span class="required">*</span></label>
+                    <textarea type="text" name="description" placeholder="Insira a descrição da vaga"></textarea>
+                </div>
+                <div class="input-box">
+                    <label>Nome da empresa <span class="required">*</span></label>
+                    <input type="text" name="company" placeholder="Insira o nome da empresa">
+                </div>
+                <div class="input-box">
+                    <label>Tipo de contratação <span class="required">*</span></label>
+                    <select name="jobtype">
+                        <option value="">Escolha uma opção</option>
+                        <option value="pj">PJ</option>
+                        <option value="clt">CLT</option>
+                        <option value="homeoffice">Home Office</option>
+                        <option value="freelancer">Free Lancer</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
 		</main>
 		<footer>
 			<div class="wrapper">
