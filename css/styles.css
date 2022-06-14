@@ -1,6 +1,7 @@
 /* geral */
 html {
 	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
 }
 
 body {
